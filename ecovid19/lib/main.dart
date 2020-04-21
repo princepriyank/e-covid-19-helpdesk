@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'drawer.dart';
+import 'maincards.dart';
 void main() {
   runApp(Home());
 }
@@ -11,10 +12,12 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: Colors.white,
         appBar: AppBar(
          title: Text("E-Covid-19 HelpDesk")
         ),
         drawer: drawer(),
+        body: maincards(),
       )
     );
   }}

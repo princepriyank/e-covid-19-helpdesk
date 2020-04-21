@@ -1,5 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:ecovid19/Informative.dart';
+import 'package:ecovid19/SelfAssement.dart';
+import 'package:ecovid19/Tweets.dart';
+import 'package:ecovid19/News.dart';
+import 'package:ecovid19/Diet.dart';
+import 'gym.dart';
+import 'main.dart';
 class drawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -15,6 +22,15 @@ class drawer extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: <Widget>[
+                ConstrainedBox(
+                  constraints: BoxConstraints(
+                    minWidth: 44,
+                    minHeight: 44,
+                    maxWidth: 100,
+                    maxHeight: 100,
+                  ),
+                  child: Image.asset("images/COVID-19.png", fit: BoxFit.cover),
+                ),
                 Text('E-Covid-19 Helpdesk', style: TextStyle(
                   color: Colors.white,
                   fontSize: 30,
@@ -30,7 +46,10 @@ class drawer extends StatelessWidget {
               leading: Icon(Icons.remove_red_eye),
               title: Text('Overview'),
               onTap: () {
-
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Home()),
+                );
               },
             ),
           ),
@@ -39,7 +58,10 @@ class drawer extends StatelessWidget {
               leading: Icon(Icons.assessment),
               title: Text('Self-Assesment Test'),
               onTap: () {
-
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Assesment()),
+                );
               },
             ),
           ),
@@ -48,10 +70,24 @@ class drawer extends StatelessWidget {
               leading: Icon(Icons.info),
               title: Text('Informative'),
               onTap: () {
-
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => informative()),
+                );
               },
             ),
           ),
+         Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+           mainAxisAlignment: MainAxisAlignment.end,
+           children: <Widget>[
+    //your elements here
+             ListTile(
+               leading: Icon(Icons.copyright),
+               title: Text('HumanoidX and Priyank Mishra'),
+             )
+         ],
+        ),
         ],
       ),
     );
