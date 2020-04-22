@@ -3,8 +3,8 @@ import 'package:flutter/cupertino.dart';
 class Symptoms extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      children: <Widget>[Column(
+    return SingleChildScrollView(
+      child: Column(
         
         children: <Widget>[
           Container(
@@ -123,15 +123,15 @@ class Symptoms extends StatelessWidget {
     ),
     textAlign: TextAlign.justify,),),
         ],
-      ),]
+      ),
     );
   }
 }
 class Prevention extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ListView(
-        children: <Widget>[Column(
+    return SingleChildScrollView(
+      child: Column(
 
           children: <Widget>[
             Container(
@@ -215,21 +215,22 @@ class Prevention extends StatelessWidget {
             ),
 
           ],
-        ),]
+        ),
     );
   }
 }
 class Treatment extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ListView(
+    return SingleChildScrollView(
+    child: Column(
       children: <Widget>[
-    Container(
-    padding: EdgeInsets.fromLTRB(20, 20, 20, 10),
-    child: Text("To date, there are no specific vaccines or medicines for COVID-19. ",
-    style: TextStyle(
-    fontSize: 18,
-    color: Colors.blueGrey), textAlign: TextAlign.justify),),
+        Container(
+         padding: EdgeInsets.fromLTRB(20, 20, 20, 10),
+          child: Text("To date, there are no specific vaccines or medicines for COVID-19. ",
+          style: TextStyle(
+          fontSize: 18,
+         color: Colors.blueGrey), textAlign: TextAlign.justify),),
         Container(
           padding: EdgeInsets.fromLTRB(20, 0, 20, 10),
           child: Text("Treatments are under investigation, and will be tested through clinical trials. ",
@@ -261,7 +262,8 @@ class Treatment extends StatelessWidget {
               style: TextStyle(
                   fontSize: 18,
                   color: Colors.blueGrey), textAlign: TextAlign.justify),),
-        ],
+    ],
+    ),
     );
   }
 }
