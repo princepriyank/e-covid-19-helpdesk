@@ -98,7 +98,7 @@ class maincards extends StatelessWidget {
             ),
             title: Text('Diet'),
             subtitle: Text(
-                'Stuck at home in lockdown and thinking what to eat. To help you stay healthy and fit.'
+                'Easy, affordable and healthy eating tips during the coronavirus disease (COVID-19) outbreak'
             ),
             trailing: Icon(Icons.fastfood),
             isThreeLine: true,
