@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:ecovid19/Informative.dart';
 import 'package:ecovid19/SelfAssement.dart';
-import 'package:ecovid19/Tweets.dart';
-import 'package:ecovid19/News.dart';
 import 'package:ecovid19/Diet.dart';
+import 'mask.dart';
 import 'gym.dart';
 class maincards extends StatelessWidget {
   @override
@@ -70,43 +69,18 @@ class maincards extends StatelessWidget {
                 maxWidth: 64,
                 maxHeight: 64,
               ),
-              child: Image.asset("images/news.png", fit: BoxFit.cover),
+              child: Image.asset("images/mask.png", fit: BoxFit.cover),
             ),
-            title: Text('News'),
+            title: Text('Home Made Mask'),
             subtitle: Text(
-                'Get Realtime updates on Covid-19 via news portals'
+                'Shortage of mask? Want to know how to make one for yourself.'
             ),
-            trailing: Icon(Icons.record_voice_over),
+            trailing: Icon(Icons.filter_vintage),
             isThreeLine: true,
             onTap: (){
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => news()),
-              );
-            },
-          ),
-        ),
-        Card(
-          child: ListTile(
-            leading:  ConstrainedBox(
-              constraints: BoxConstraints(
-                minWidth: 44,
-                minHeight: 44,
-                maxWidth: 64,
-                maxHeight: 64,
-              ),
-              child: Image.asset("images/tweet.png", fit: BoxFit.cover),
-            ),
-            title: Text('Tweets'),
-            subtitle: Text(
-                'Get Realtime updates on Covid-19 via Twitter. Get insights on what world is upto with Tweets'
-            ),
-            trailing: Icon(Icons.local_post_office),
-            isThreeLine: true,
-            onTap: (){
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => tweets()),
+                MaterialPageRoute(builder: (context) => Mask()),
               );
             },
           ),
@@ -161,6 +135,7 @@ class maincards extends StatelessWidget {
             },
           ),
         ),
+
       ],
     );
   }

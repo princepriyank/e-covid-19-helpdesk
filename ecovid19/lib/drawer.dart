@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:ecovid19/Informative.dart';
 import 'package:ecovid19/SelfAssement.dart';
-import 'package:ecovid19/Tweets.dart';
-import 'package:ecovid19/News.dart';
 import 'package:ecovid19/Diet.dart';
 import 'gym.dart';
 import 'main.dart';
@@ -77,17 +75,7 @@ class drawer extends StatelessWidget {
               },
             ),
           ),
-         Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-           mainAxisAlignment: MainAxisAlignment.end,
-           children: <Widget>[
-    //your elements here
-             ListTile(
-               leading: Icon(Icons.copyright),
-               title: Text('HumanoidX and Priyank Mishra'),
-             )
-         ],
-        ),
+
         ],
       ),
     );

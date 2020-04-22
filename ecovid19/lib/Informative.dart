@@ -17,7 +17,7 @@ class informative extends StatelessWidget {
 
     ],
     ),
-    title: Text('Tabs Demo'),
+    title: Text('Covid-19 Information Portal'),
     ),
     body: TabBarView(
     children: [
