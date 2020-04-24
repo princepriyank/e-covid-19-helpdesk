@@ -6,7 +6,7 @@ import 'package:ecovid19/Diet.dart';
 import 'mask.dart';
 import 'gym.dart';
 import 'tweet.dart';
-
+import 'NewsPortal.dart';
 class maincards extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -84,6 +84,31 @@ class maincards extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => tweet()),
+                );
+              },
+            ),
+          ),
+          Card(
+            child: ListTile(
+              leading:  ConstrainedBox(
+                constraints: BoxConstraints(
+                  minWidth: 44,
+                  minHeight: 44,
+                  maxWidth: 64,
+                  maxHeight: 64,
+                ),
+                child: Image.asset("images/news.png", fit: BoxFit.cover),
+              ),
+              title: Text('News'),
+              subtitle: Text(
+                  'Want to know what is happening outside while you are in. Get realtime news and updates here'
+              ),
+              trailing: Icon(Icons.update),
+              isThreeLine: true,
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => news()),
                 );
               },
             ),
