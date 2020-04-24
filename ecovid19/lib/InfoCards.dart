@@ -267,6 +267,46 @@ class Treatment extends StatelessWidget {
     );
   }
 }
+class OverView extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return SingleChildScrollView(
+      child: Column(
+        children: <Widget>[
+          Image(
+            image: AssetImage("images/corona.jpg"),
+          ),
+          Container(
+            padding: EdgeInsets.fromLTRB(20, 20, 20, 10),
+            child: Text("Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) is the virus strain that causes coronavirus disease 2019 (COVID-19), a respiratory illness. It is colloquially known as the coronavirus, and was previously referred to by its provisional name 2019 novel coronavirus (2019-nCoV).",
+                style: TextStyle(
+                    fontSize: 18,
+                    color: Colors.blueGrey), textAlign: TextAlign.justify),),
+          Container(
+            padding: EdgeInsets.all(20),
+            child: Image(
+              image: AssetImage("images/corona2.jpg"),
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.fromLTRB(20, 0, 20, 10),
+            child: Text("SARS-CoV-2 is a positive-sense single-stranded RNA virus. It is contagious in humans, and the World Health Organization (WHO) has designated the ongoing pandemic of COVID-19 a Public Health Emergency of International Concern.Because the strain was first discovered in Wuhan, China, it is sometimes referred to as the Wuhan virus or Wuhan coronavirus.",
+                style: TextStyle(
+                    fontSize: 18,
+                    color: Colors.blueGrey), textAlign: TextAlign.justify),),
+          Container(
+            padding: EdgeInsets.fromLTRB(20, 0, 20, 10),
+            child: Text("Since the WHO discourages the use of names based upon locations such as MERS, and to avoid confusion with the disease SARS, it sometimes refers to SARS-CoV-2 as the COVID-19 virus in public health communications, instead of Wuhan coronavirus or Wuhan-CoV.The general public frequently calls both SARS-CoV-2 and the disease it causes coronavirus, but scientists typically use more precise terminology.",
+                style: TextStyle(
+                    fontSize: 18,
+                    color: Colors.blueGrey), textAlign: TextAlign.justify),),
+
+        ],
+      ));
+
+  }
+}
+
 
 
 

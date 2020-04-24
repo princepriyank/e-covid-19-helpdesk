@@ -6,22 +6,28 @@ class informative extends StatelessWidget {
   Widget build(BuildContext context) {
     return  MaterialApp(
         home: DefaultTabController(
-    length: 3,
+    length: 4,
     child: Scaffold(
     appBar: AppBar(
       backgroundColor: Colors.redAccent,
+
     bottom: TabBar(
+      isScrollable: true,
+      indicatorColor: Colors.white,
     tabs: [
+      Tab(text: "Overview",),
      Tab(text: "Symptoms",),
      Tab(text: "Prevention",),
      Tab(text: "Treatment",),
 
     ],
+
     ),
     title: Text('Covid-19 Information Portal'),
     ),
     body: TabBarView(
     children: [
+      OverView(),
      Symptoms(),
       Prevention(),
       Treatment(),
