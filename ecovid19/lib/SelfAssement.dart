@@ -8,6 +8,7 @@ class Assesment extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        backgroundColor: Colors.redAccent,
         title: Text("Self Assesment"),
       ),
       body: SafeArea(

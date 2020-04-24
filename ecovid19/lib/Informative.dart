@@ -9,6 +9,7 @@ class informative extends StatelessWidget {
     length: 3,
     child: Scaffold(
     appBar: AppBar(
+      backgroundColor: Colors.redAccent,
     bottom: TabBar(
     tabs: [
      Tab(text: "Symptoms",),

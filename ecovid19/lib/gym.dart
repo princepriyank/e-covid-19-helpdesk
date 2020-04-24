@@ -7,6 +7,7 @@ class gym extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text("Exercises"),
+        backgroundColor: Colors.redAccent,
       ),
       body: SingleChildScrollView(
         child: Column(

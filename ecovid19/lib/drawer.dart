@@ -36,7 +36,7 @@ class drawer extends StatelessWidget {
 
             ),
             decoration: BoxDecoration(
-              color: Colors.blue,
+              color: Colors.redAccent,
             ),
           ),
           Card(

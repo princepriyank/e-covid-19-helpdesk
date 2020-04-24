@@ -7,6 +7,7 @@ class diet extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text("Ideas to Nutritious Diet"),
+        backgroundColor: Colors.redAccent,
       ),
       body: ListView(
         children: <Widget>[

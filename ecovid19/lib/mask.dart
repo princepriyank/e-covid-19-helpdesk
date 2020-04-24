@@ -7,6 +7,7 @@ class Mask extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Mask"),
+        backgroundColor: Colors.redAccent,
       ),
       body: Card(
           child: Center(
