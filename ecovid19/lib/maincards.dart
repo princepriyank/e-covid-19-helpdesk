@@ -5,6 +5,7 @@ import 'package:ecovid19/SelfAssement.dart';
 import 'package:ecovid19/Diet.dart';
 import 'mask.dart';
 import 'gym.dart';
+
 class maincards extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -61,6 +62,7 @@ class maincards extends StatelessWidget {
               },
             ),
           ),
+
           Card(
             child: ListTile(
               leading:  ConstrainedBox(
