@@ -5,6 +5,7 @@ import 'package:ecovid19/SelfAssement.dart';
 import 'package:ecovid19/Diet.dart';
 import 'mask.dart';
 import 'gym.dart';
+import 'tweet.dart';
 
 class maincards extends StatelessWidget {
   @override
@@ -58,6 +59,31 @@ class maincards extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => Assesment()),
+                );
+              },
+            ),
+          ),
+          Card(
+            child: ListTile(
+              leading:  ConstrainedBox(
+                constraints: BoxConstraints(
+                  minWidth: 44,
+                  minHeight: 44,
+                  maxWidth: 64,
+                  maxHeight: 64,
+                ),
+                child: Image.asset("images/tweet.png", fit: BoxFit.cover),
+              ),
+              title: Text('Tweets'),
+              subtitle: Text(
+                  'Want to know what is happening outside while you are in. Get realtime tweets from others in here'
+              ),
+              trailing: Icon(Icons.message),
+              isThreeLine: true,
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => tweet()),
                 );
               },
             ),
