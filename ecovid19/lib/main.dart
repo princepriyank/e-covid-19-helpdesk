@@ -36,7 +36,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.redAccent,
         appBar: AppBar(
          title: Text("E-Covid-19 HelpDesk"),
           backgroundColor: Colors.redAccent,

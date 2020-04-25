@@ -3,7 +3,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:ecovid19/Informative.dart';
 import 'package:ecovid19/SelfAssement.dart';
 import 'package:ecovid19/Diet.dart';
-import 'mask.dart';
 import 'gym.dart';
 import 'tweet.dart';
 import 'NewsPortal.dart';
@@ -13,185 +12,188 @@ class maincards extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: <Widget>[
-          Card(
-            child: ListTile(
-              leading:  ConstrainedBox(
-              constraints: BoxConstraints(
-              minWidth: 44,
-              minHeight: 44,
-               maxWidth: 64,
-               maxHeight: 64,
-               ),
-               child: Image.asset("images/COVID-19.png", fit: BoxFit.cover),
-             ),
-              title: Text('COVID-19'),
-              subtitle: Text(
-                  'To learn about symptoms, prevention and information about Covid-19'
-              ),
-              trailing: Icon(Icons.slideshow),
-              isThreeLine: true,
-              onTap: (){
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => informative()),
-                );
-              },
-            ),
-          ),
-          Card(
-            child: ListTile(
-              leading:  ConstrainedBox(
-                constraints: BoxConstraints(
-                  minWidth: 44,
-                  minHeight: 44,
-                  maxWidth: 64,
-                  maxHeight: 64,
+          Row(
+      children: <Widget>[
+        Expanded(
+          flex: 1,
+          child: GestureDetector(
+            child: Card(
+
+                child: Column(
+
+                  children: <Widget>[
+                    Image(
+                      image: AssetImage("images/COVID-19.png"),
+
+                      height: 150,
+                    ),
+                    Text('COVID-19', textAlign: TextAlign.left, style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+                    Text(
+                        'To learn about danger, symptoms, prevention and information about Covid-19. Understand what to do and what to stop.',style: TextStyle(fontSize: 15),textAlign: TextAlign.center,
+                    ),
+                  ],
                 ),
-                child: Image.asset("images/test.png", fit: BoxFit.cover),
+
               ),
-              title: Text('Self-Assesment Test'),
-              subtitle: Text(
-                  'Covid-19 Symptoms are changing day by day. To know if you should see the doctor or not give this self assesment test.'
-              ),
-              trailing: Icon(Icons.question_answer),
-              isThreeLine: true,
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Assesment()),
-                );
-              },
-            ),
-          ),
-          Card(
-            child: ListTile(
-              leading:  ConstrainedBox(
-                constraints: BoxConstraints(
-                  minWidth: 44,
-                  minHeight: 44,
-                  maxWidth: 64,
-                  maxHeight: 64,
-                ),
-                child: Image.asset("images/tweet.png", fit: BoxFit.cover),
-              ),
-              title: Text('Tweets'),
-              subtitle: Text(
-                  'Want to know what is happening outside while you are in. Get realtime tweets from others in here'
-              ),
-              trailing: Icon(Icons.message),
-              isThreeLine: true,
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => tweet()),
-                );
-              },
-            ),
-          ),
-          Card(
-            child: ListTile(
-              leading:  ConstrainedBox(
-                constraints: BoxConstraints(
-                  minWidth: 44,
-                  minHeight: 44,
-                  maxWidth: 64,
-                  maxHeight: 64,
-                ),
-                child: Image.asset("images/news.png", fit: BoxFit.cover),
-              ),
-              title: Text('News'),
-              subtitle: Text(
-                  'Want to know what is happening outside while you are in. Get realtime news and updates here'
-              ),
-              trailing: Icon(Icons.update),
-              isThreeLine: true,
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => news()),
-                );
-              },
-            ),
+            onTap: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => informative()),
+              );
+            },
           ),
 
-          Card(
-            child: ListTile(
-              leading:  ConstrainedBox(
-                constraints: BoxConstraints(
-                  minWidth: 44,
-                  minHeight: 44,
-                  maxWidth: 64,
-                  maxHeight: 64,
-                ),
-                child: Image.asset("images/mask.png", fit: BoxFit.cover),
+        ),
+        Expanded(
+          flex: 1,
+          child: GestureDetector(
+            child: Card(
+              child: Column(
+                children: <Widget>[
+                  Image(
+                    image: AssetImage("images/test.png"),
+
+                    height: 150,
+                  ),
+                  Text('Self Assesment Test', textAlign: TextAlign.left, style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+                  Text(
+                    'Covid-19 Symptoms are changing day by day. To know if you should see the doctor or not give this self assesment test.',style: TextStyle(fontSize: 15),textAlign: TextAlign.center,
+                  ),
+                ],
               ),
-              title: Text('Home Made Mask'),
-              subtitle: Text(
-                  'Shortage of mask? Want to know how to make one for yourself.'
-              ),
-              trailing: Icon(Icons.filter_vintage),
-              isThreeLine: true,
-              onTap: (){
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Mask()),
-                );
-              },
             ),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Assesment()),
+              );
+            },
           ),
-          Card(
-            child: ListTile(
-              leading:  ConstrainedBox(
-                constraints: BoxConstraints(
-                  minWidth: 44,
-                  minHeight: 44,
-                  maxWidth: 64,
-                  maxHeight: 64,
+
+        ),
+      ]),
+          Row(
+              children: <Widget>[
+                Expanded(
+                  flex: 1,
+                  child: GestureDetector(
+                    child: Card(
+
+                      child: Column(
+                        children: <Widget>[
+                          Image(
+                            image: AssetImage("images/tweet.png"),
+
+                            height: 150,
+                          ),
+                          Text('Tweets', textAlign: TextAlign.left, style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+                          Text(
+                            'Want to know what is happening outside while you are in. Get realtime tweets from others in here',style: TextStyle(fontSize: 15),textAlign: TextAlign.center,
+                          ),
+                        ],
+                      ),
+
+                    ),
+                    onTap: (){
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => tweet()),
+                      );
+                    },
+                  ),
+
                 ),
-                child: Image.asset("images/diet.png", fit: BoxFit.cover),
-              ),
-              title: Text('Diet'),
-              subtitle: Text(
-                  'Easy, affordable and healthy eating tips during the coronavirus disease (COVID-19) outbreak'
-              ),
-              trailing: Icon(Icons.fastfood),
-              isThreeLine: true,
-              onTap: (){
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => diet()),
-                );
-              },
-            ),
-          ),
-          Card(
-            child: ListTile(
-              leading:  ConstrainedBox(
-                constraints: BoxConstraints(
-                  minWidth: 44,
-                  minHeight: 44,
-                  maxWidth: 64,
-                  maxHeight: 64,
+                Expanded(
+                  flex: 1,
+                  child: GestureDetector(
+                    child: Card(
+                      child: Column(
+                        children: <Widget>[
+                          Image(
+                            image: AssetImage("images/news.png"),
+
+                            height: 150,
+                          ),
+                          Text('News', textAlign: TextAlign.left, style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+                          Text(
+                            'Want to know what is happening outside while you are in. Get realtime news and updates here',style: TextStyle(fontSize: 15),textAlign: TextAlign.center,
+                          ),
+                        ],
+                      ),
+                    ),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => news()),
+                      );
+                    },
+                  ),
+
                 ),
-                child: Image.asset("images/gym.png", fit: BoxFit.cover),
-              ),
-              title: Text('Exercise'),
-              subtitle: Text(
-                  'Not being able to go to gym should not make you a patato bag. Here, is some in home workout for you.'
-              ),
-              trailing: Icon(Icons.fitness_center),
-              isThreeLine: true,
-              onTap: (){
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => gym()),
-                );
-              },
-            ),
-          ),
+              ]),
+          Row(
+              children: <Widget>[
+                Expanded(
+                  flex: 1,
+                  child: GestureDetector(
+                    child: Card(
+
+                      child: Column(
+                        children: <Widget>[
+                          Image(
+                            image: AssetImage("images/gym.png"),
+
+                            height: 150,
+                          ),
+                          Text('Exercise', textAlign: TextAlign.left, style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+                          Text(
+                            'Not being able to go to gym should not make you a patato bag. Here, is some in home workout for you.',style: TextStyle(fontSize: 15),textAlign: TextAlign.center,
+                          ),
+                        ],
+                      ),
+
+                    ),
+                    onTap: (){
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => gym()),
+                      );
+                    },
+                  ),
+
+                ),
+                Expanded(
+                  flex: 1,
+                  child: GestureDetector(
+                    child: Card(
+                      child: Column(
+                        children: <Widget>[
+                          Image(
+                            image: AssetImage("images/diet.png"),
+
+                            height: 150,
+                          ),
+                          Text('Diet', textAlign: TextAlign.left, style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+                          Text(
+                            'Easy, affordable and healthy eating tips during the coronavirus disease (COVID-19) outbreak',style: TextStyle(fontSize: 15),textAlign: TextAlign.center,
+                          ),
+                        ],
+                      ),
+                    ),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => diet()),
+                      );
+                    },
+                  ),
+
+                ),
+              ]),
 
         ],
       ),
     );
   }
 }
+
