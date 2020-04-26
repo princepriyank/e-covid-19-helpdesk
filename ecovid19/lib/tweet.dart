@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'dart:convert';
-import 'dart:async';
+
 import 'package:webview_flutter/webview_flutter.dart';
 
 class tweet extends StatefulWidget {
@@ -13,7 +11,7 @@ class tweet extends StatefulWidget {
 
 class _WebViewTestState extends State<tweet> {
   //
-  WebViewController _webViewController;
+
 
   // String filePath = 'files/test.html';
 
@@ -24,7 +22,7 @@ class _WebViewTestState extends State<tweet> {
       appBar: AppBar(title: Text('Tweets'),
       backgroundColor: Colors.redAccent,),
       body: WebView(
-        initialUrl: "https://twitter.com/search?q=%23CoronaVirus&src=typed_query",
+        initialUrl: "https://twitter.com/hashtag/corona",
         javascriptMode: JavascriptMode.unrestricted,
 
       ),

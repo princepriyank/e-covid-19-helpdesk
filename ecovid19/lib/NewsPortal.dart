@@ -11,7 +11,7 @@ class news extends StatefulWidget {
 
 class _WebViewTestState extends State<news> {
   //
-  WebViewController _webViewController;
+
 
   // String filePath = 'files/test.html';
 
@@ -22,7 +22,7 @@ class _WebViewTestState extends State<news> {
       appBar: AppBar(title: Text('News'),
         backgroundColor: Colors.redAccent,),
       body: WebView(
-        initialUrl: "https://www.google.com/search?q=CoronaVirus&rlz=1C1CHBF_enIN881IN881&sxsrf=ALeKk01_K_4iEw3pfbihVCTbxALQDLb0iw:1587749587264&source=lnms&tbm=nws&sa=X&ved=2ahUKEwi-l5CRzIHpAhUb7HMBHStXAyEQ_AUoAXoECCAQAw",
+        initialUrl: "https://news.google.com/topics/CAAqBwgKMMqAmAsw9KmvAw?hl=en-IN&gl=IN&ceid=IN%3Aen",
         javascriptMode: JavascriptMode.unrestricted,
 
       ),

@@ -9,6 +9,13 @@ class informative extends StatelessWidget {
     length: 4,
     child: Scaffold(
     appBar: AppBar(
+      leading: GestureDetector(
+        child: Icon(Icons.arrow_back,
+        ),
+        onTap: (){
+          Navigator.pop(context);
+        },
+      ),
       backgroundColor: Colors.redAccent,
 
     bottom: TabBar(
