@@ -12,9 +12,9 @@ class drawer extends StatelessWidget {
       // Add a ListView to the drawer. This ensures the user can scroll
       // through the options in the drawer if there isn't enough vertical
       // space to fit everything.
-      child: ListView(
+      child: Column(
         // Important: Remove any padding from the ListView.
-        padding: EdgeInsets.zero,
+
         children: <Widget>[
           DrawerHeader(
             child: Column(
@@ -30,13 +30,13 @@ class drawer extends StatelessWidget {
                   child: Image.asset("images/COVID-19.png", fit: BoxFit.cover),
                 ),
                 Text('E-Covid-19 Helpdesk', style: TextStyle(
-                  color: Colors.white,
+                  color: Colors.redAccent,
                   fontSize: 30,
                 )),],
 
             ),
             decoration: BoxDecoration(
-              color: Colors.redAccent,
+              color: Colors.white,
             ),
           ),
           Card(
@@ -75,7 +75,27 @@ class drawer extends StatelessWidget {
               },
             ),
           ),
+          Expanded(
+            child: Container(
 
+            ),
+          ),
+          Container(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Icon(
+                  Icons.copyright,
+                ),
+                Text(
+                  "Priyank Mishra",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold
+                  ),
+                )
+              ],
+            ),
+          )
         ],
       ),
     );

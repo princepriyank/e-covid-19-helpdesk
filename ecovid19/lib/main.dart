@@ -17,7 +17,7 @@ class _SplashAppState extends State<SplashApp> {
   @override
   Widget build(BuildContext context) {
     return new SplashScreen(
-        seconds: 5,
+        seconds: 3,
         navigateAfterSeconds: new Home(),
 
         image: new Image.asset('images/COVID-19.png'),
