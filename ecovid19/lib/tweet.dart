@@ -24,7 +24,7 @@ class _WebViewTestState extends State<tweet> {
       body: WebView(
         initialUrl: "https://twitter.com/hashtag/corona",
         javascriptMode: JavascriptMode.unrestricted,
-
+        key: UniqueKey(),
       ),
     );
   }

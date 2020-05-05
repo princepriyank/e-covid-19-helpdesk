@@ -24,6 +24,7 @@ class _WebViewTestState extends State<news> {
       body: WebView(
         initialUrl: "https://news.google.com/topics/CAAqBwgKMMqAmAsw9KmvAw?hl=en-IN&gl=IN&ceid=IN%3Aen",
         javascriptMode: JavascriptMode.unrestricted,
+        key: UniqueKey(),
 
       ),
     );
